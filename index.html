@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html ⚡4email data-css-strict>
+<head>
+    <meta charset="UTF-8">
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
+  <style amp4email-boilerplate>body{visibility:hidden}</style>
+  <style amp-custom>
+    h1 {
+      font-family: arial;
+      margin: 10px;
+      color: red;
+    }
+    .center {
+      display: flex;
+      justify-content: center;
+      background-color: #893a8e;
+      padding-top: 10px;
+      height: 600px;
+      align-items: flex-start;
+    }
+    .formBox{
+      background-color: white;
+      padding: 15px;
+      border-radius: 15px;
+      border: 0px;
+      width: 390px;
+    }
+    .text{
+      text-align: center;
+    }
+    .text2{
+      text-align: center;
+      margin-top: -10px;
+    }
+   
+    .input{
+      margin-top: 5px;
+      height: 30px;
+    }
+
+    .otpBox{
+      display: flex;
+    }
+    .otpBtn{
+        width: "750px";
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 18px;
+        height: 35.5px;
+        color: white;
+        background-color: #893a8f;
+        cursor: pointer;
+        margin-top: 5px;
+        width: 104px;
+    }
+    select{
+      width: 99%;
+      height: 30px;
+    }
+    .btn{
+        width: 385px;
+        height:35px;
+        font-size: 18px;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #ff6f3a;
+        margin: 20px 0px;
+        cursor: pointer;
+    }
+    .classBox{
+      display: flex;
+      justify-content: center;
+      width: 385px;
+    }
+    .class{
+      border: 2px solid gray;
+      height: 30px;
+      width: 80px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      font-size: 18px;
+      margin: 7px 5px;
+    }
+    .tickImg{
+      padding-left: 100px;
+    }
+    .timeBox{
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 25px;
+    }
+    .tBox{
+      font-size: 25px;
+      font-weight: bold;
+      padding: 15px;
+      background: #dddddd;
+    }
+    .tText{
+      display: flex;
+      justify-content: center;
+      margin-top: 10px;
+    }
+    @media screen and (max-width:450px){
+		.formBox{
+          width: 80%;
+        }
+      .btn{
+        width: 98%;
+      }
+      .classBox{
+        width:99%;
+      }
+      .class{
+        width: 25%;
+        font-size:13px;
+      margin: 7px 3px;
+        
+      }
+      .tickImg{
+      padding-left: 20%;
+    }
+    }
+  </style>
+</head>
+<body>
+    <amp-img src="https://res.cloudinary.com/dv4bjke87/image/upload/v1669899805/posts/emrkvdcgfblhzsxhnh5g.gif"
+         alt="photo description"
+         width="600"
+         height="1172"
+         layout="responsive"
+         >
+</amp-img>
+<div class="center">
+  <div class="formBox" id="form">
+        <h3 class="text">Book your Free Chemistry Class</h3>
+        <h5 class="text2">Learn from India's best teachers</h5>
+        <h3 class="text">Enter Your Details</h3>
+        <input type="text"
+        class="input name"
+        style="width:97%;"
+          name="name"
+          placeholder="Child's Name"
+          required>
+      <br>
+      <div class="otpBox">
+        <input type="text"
+        class="input mobile"
+        placeholder="Mobile Number"
+        style="width:70%;"
+          name="email"
+          required>
+      <div class="otpBtn">Send OTP</div>
+      </div>
+
+        <input type="email"
+        class="input email"
+        style="width:97%;"
+        placeholder="Email"
+          name="email"
+          required>
+      <br>
+      <select id="Location" name="Location" style="width:99%;" class="input state">
+        <option value="Mumbai">Mumbai</option>
+        <option value="Delhi">Delhi</option>
+        <option value="Kolkata">Kolkata</option>
+        <option value="Chennai">Chennai</option>
+      </select>
+
+     
+      
+     <div class="btn" onclick="next()">Try Now</div>
+    </div>
+  </div>
+</div>
+<script>
+
+    let name,mobile,email,state,std,day,time
+  function next(){
+    name=document.querySelector(".name").value;
+    mobile=document.querySelector(".mobile").value;
+    email=document.querySelector(".email").value;
+    state=document.querySelector(".state").value;
+    document.getElementById('form').innerHTML = "<h3 class='text'>"+"Book your Free Chemistry Class"+"</h3>"+
+        "<h5 class='text2'>"+"Learn from India's best teachers"+"</h5>"+
+        "<h3 class='text'>"+"Enter Your Details"+"</h3>"+
+        "<input type='text' class='input name' style='width:97%;' name='name' placeholder='Childs Name' required>"+
+      "<br>"+
+      "<div class='otpBox'>"+
+        "<input type='text' class='input mobile' placeholder='Mobile Number' style='width:70%;' name='email' required>"+
+      "<div class='otpBtn'>"+"Send OTP"+"</div>"+
+      "</div>"+
+        "<input type='email' class='input email' style='width:97%;' placeholder='Email' name='email' required>"+
+      "<br>"+
+      "<select id='Location' name='Location state' style='width:99%;' class='input'>"+
+        "<option value='Mumbai'>"+"Mumbai"+"</option>"+
+        "<option value='Delhi'>"+"Delhi"+"</option>"+
+        "<option value='Kolkata'>"+"Kolkata"+"</option>"+
+        "<option value='Chennai'>"+"Chennai"+"</option>"+
+      "</select>"+
+   
+     "<h3 class='text'>"+"Select Your Class"+"</h3>"+
+      "<div class='classBox'>"+
+          "<div class='class std4' onclick='setStd4()'>"+"Class 4"+"</div>"+
+          "<div class='class std5' onclick='setStd5()'>"+"Class 5"+"</div>"+
+          "<div class='class std6' onclick='setStd6()'>"+"Class 6"+"</div>"+
+          "<div class='class std7' onclick='setStd7()'>"+"Class 7"+"</div>"+
+      "</div>"+
+      "<div class='classBox'>"+
+        "<div class='class std8' onclick='setStd8()'>"+"Class 8"+"</div>"+
+        "<div class='class std9' onclick='setStd9()'>"+"Class 9"+"</div>"+
+    "</div>"+
+    "<div class='btn' onclick='next2()'>"+"Try Now"+"</div>"
+    document.querySelector(".name").value=name
+    document.querySelector(".mobile").value=mobile
+    document.querySelector(".email").value=email
+    document.querySelector(".state").value=state
+  }
+
+  function next2(){
+    document.getElementById('form').innerHTML = "<h3 class='text'>"+"Book your Free Chemistry Class"+"</h3>"+
+        "<h5 class='text2'>"+"Learn from India's best teachers"+"</h5>"+
+        "<h3 class='text'>"+"Pick Your Date and Time"+"</h3>"+
+        "<h3 class='text'>"+"Select Date"+"</h3>"+
+        "<div class='classBox'>"+
+          "<div class='class mon' onclick='setMon()'>"+"MON"+"</div>"+
+          "<div class='class tue' onclick='setTues()'>"+"TUES"+"</div>"+
+          "<div class='class wed' onclick='setWed()'>"+"WED"+"</div>"+
+          "<div class='class thurs' onclick='setThurs()'>"+"THURS"+"</div>"+
+      "</div>"+
+      "<div class='classBox'>"+
+        "<div class='class fri' onclick='setFri()'>"+"FRI"+"</div>"+
+        "<div class='class sat' onclick='setSat()'>"+"SAT"+"</div>"+
+    "</div>"+
+   
+     "<h3 class='text'>"+"Select Time"+"</h3>"+
+      "<div class='classBox'>"+
+          "<div class='class time10' onclick='setTime10()'>"+"10:00 AM"+"</div>"+
+          "<div class='class time11' onclick='setTime11()'>"+"11:00 AM"+"</div>"+
+          "<div class='class time12' onclick='setTime12()'>"+"12:00 AM"+"</div>"+
+          "<div class='class time2' onclick='setTime2()'>"+"2:00 PM"+"</div>"+
+      "</div>"+
+      "<div class='classBox'>"+
+        "<div class='class time4' onclick='setTime4()'>"+"4:00 PM"+"</div>"+
+        "<div class='class time8' onclick='setTime8()'>"+"8:00 PM"+"</div>"+
+    "</div>"+
+    "<div class='btn' onclick='next3()'>"+"Confirm"+"</div>"
+  }
+
+  function next3(){
+    document.getElementById('form').innerHTML = "<h2 class='text'>"+"Booking Succesful!"+"</h3>"+
+      "<img class='tickImg' width='180' height='180' src='https://img.icons8.com/color/512/ok.png'>"+
+      "<div class='text'>"+name+"</div>"+
+      "<div class='text'>"+mobile+"</div>"+
+      "<div class='text'>"+email+"</div>"+
+      "<div class='text'>"+state+"</div>"+
+      "<div class='text'>"+std+"</div>"+
+      "<div class='text'>"+day+"</div>"+
+      "<div class='text'>"+time+"</div>"+
+     "<h3 class='text'>"+"Your Class starts in"+"</h3>"+
+     "<div class='timeBox'>"+
+        "<div>"+
+          "<div class='tBox'>"+"06"+"</div>"+
+          "<div class='tText'>"+"Hour"+"</div>"+
+        "</div>"+
+        "<div>"+
+          "<div class='tBox'>"+"06"+"</div>"+
+          "<div class='tText'>"+"Min"+"</div>"+
+        "</div>"+
+        "<div>"+
+          "<div class='tBox'>"+"06"+"</div>"+
+          "<div class='tText'>"+"Sec"+"</div>"+
+        "</div>"+
+      "</div>"
+  }
+  function setTime10(){
+    time="10:00 AM"
+    clearTime()
+    document.querySelector(".time10").style.borderColor = "#ff6f3a";
+  }
+  function setTime11(){
+    time="11:00 AM"
+    clearTime()
+    document.querySelector(".time11").style.borderColor = "#ff6f3a";
+  }
+  function setTime12(){
+    time="12:00 AM"
+    clearTime()
+    document.querySelector(".time12").style.borderColor = "#ff6f3a";
+  }
+  function setTime2(){
+    time="2:00 PM"
+    clearTime()
+    document.querySelector(".time2").style.borderColor = "#ff6f3a";
+  }
+  function setTime4(){
+    time="4:00 PM"
+    clearTime()
+    document.querySelector(".time4").style.borderColor = "#ff6f3a";
+  }
+  function setTime8(){
+    time="8:00 PM"
+    clearTime()
+    document.querySelector(".time8").style.borderColor = "#ff6f3a";
+  }
+  function setStd4(){
+    std="class 4";
+    clearStd()
+    document.querySelector(".std4").style.borderColor = "#ff6f3a";
+  }
+  function setStd5(){
+    std="class 5";
+    clearStd()
+    document.querySelector(".std5").style.borderColor = "#ff6f3a";
+  }
+  function setStd6(){
+    std="class 6";
+    clearStd()
+    document.querySelector(".std6").style.borderColor = "#ff6f3a";
+  }
+  function setStd7(){
+    std="class 7";
+    clearStd()
+    document.querySelector(".std7").style.borderColor = "#ff6f3a";
+  }
+  function setStd8(){
+    std="class 8";
+    clearStd()
+    document.querySelector(".std8").style.borderColor = "#ff6f3a";
+  }
+  function setStd9(){
+    std="class 9";
+    clearStd()
+    document.querySelector(".std9").style.borderColor = "#ff6f3a";
+  }
+  function setMon(){
+    day="Monday";
+    clearDay()
+    document.querySelector(".mon").style.borderColor = "#ff6f3a";
+  }
+  function setTues(){
+    day="Tuesday";
+    clearDay()
+    document.querySelector(".tue").style.borderColor = "#ff6f3a";
+  }
+  function setWed(){
+    day="Wednesday";
+    clearDay()
+    document.querySelector(".wed").style.borderColor = "#ff6f3a";
+  }
+  function setThurs(){
+    day="Thursday";
+    clearDay()
+    document.querySelector(".thurs").style.borderColor = "#ff6f3a";
+  }
+  function setFri(){
+    day="Friday";
+    clearDay()
+    document.querySelector(".fri").style.borderColor = "#ff6f3a";
+  }
+  function setSat(){
+    day="Saturday";
+    clearDay()
+    document.querySelector(".sat").style.borderColor = "#ff6f3a";
+  }
+  function clearDay(){
+    document.querySelector(".mon").style.borderColor = "gray";
+    document.querySelector(".tue").style.borderColor = "gray";
+    document.querySelector(".wed").style.borderColor = "gray";
+    document.querySelector(".thurs").style.borderColor = "gray";
+    document.querySelector(".fri").style.borderColor = "gray";
+    document.querySelector(".sat").style.borderColor = "gray";
+  }
+  function clearTime(){
+    document.querySelector(".time10").style.borderColor = "gray";
+    document.querySelector(".time11").style.borderColor = "gray";
+    document.querySelector(".time12").style.borderColor = "gray";
+    document.querySelector(".time2").style.borderColor = "gray";
+    document.querySelector(".time4").style.borderColor = "gray";
+    document.querySelector(".time8").style.borderColor = "gray";
+  }
+  function clearStd(){
+    document.querySelector(".std4").style.borderColor = "gray";
+    document.querySelector(".std5").style.borderColor = "gray";
+    document.querySelector(".std6").style.borderColor = "gray";
+    document.querySelector(".std7").style.borderColor = "gray";
+    document.querySelector(".std8").style.borderColor = "gray";
+    document.querySelector(".std9").style.borderColor = "gray";
+  }
+</script>
+</body>
+</html>
